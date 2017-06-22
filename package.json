@@ -2,7 +2,7 @@
   "name": "officeSupplies",
   "version": "0.0.1",
   "scripts" {
-  	"start": "node ./server/server"
+  	"start": "node server"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
