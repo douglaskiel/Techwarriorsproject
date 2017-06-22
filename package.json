@@ -1,0 +1,16 @@
+{
+  "name": "officeSupplies",
+  "version": "0.0.1",
+  "scripts" {
+  	"start": "node ./server/server"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "jsonwebtoken": "^7.4.1",
+    "pg": "^6.3.1",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.1.0"
+  }
+}
