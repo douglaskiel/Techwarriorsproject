@@ -14,6 +14,11 @@ app.use('/client', express.static(__dirname + '/client'))
 //Controllers
 var userController = require('./server/controllers/user-controller');
 
+// Routers
+var secureUserRouter = require('./server/routes/user');
+
+app.use('/secure-api/user', secureUserRouter);
+
 //Routes
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/client/index.html');

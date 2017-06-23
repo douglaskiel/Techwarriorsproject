@@ -61,17 +61,19 @@ module.exports.logIn = function(req, res) {
 				})
 
 
-			if (isVerified) 
-				{res.json({
-					userData: userData,
-					token: token
-				});
-			} else {
-				res.status(400).send("Password doesn't comply, Sir!")
-			}
-		}
-		
-	}).catch(function(err) {
-		res.status(500).send("Unable to process the query.");
-	})
+				if (isVerified){
+          // Vid.1 Hr 1:53:33 - this is to keep peoples password safe from identity theft.
+          delete userData.user_password;
+          res.json({
+            userData: userData,
+            token: token
+          })
+        } else {
+          res.status(400).send("Password doesn't comply, Sir!");
+        }
+      }
+      
+  }).catch(function(err){
+    res.status(500).send("Unable to process the query.");
+  })
 }
